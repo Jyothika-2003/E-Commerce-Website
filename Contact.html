@@ -1,0 +1,115 @@
+<html>
+    <head>
+       <title>Contact Us</title>
+      
+        <link rel="stylesheet" type="text/css" href="style.css">
+
+        <linK rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@/css/fontawesome.min.css">
+
+    </head>
+    <body>
+       
+       <nav class="nav nav_top">
+           <div class="logo">
+               <a href="index.html"><img src="Images\\logo.png" width="150"></div></a>
+           </div>
+           <div class="nav_side">
+               <a href="About Us.html">About Us</a>
+               <a href="Services.html">Services</a>
+               <a href="Blogs.html">Blogs</a>
+               <a href="Contact.html">Contact</a>
+               <a href="login.html">Login/Register</a>
+           </div>
+       </nav>
+            
+       <div class="contact_container">
+            <h2>Contact Us</h2>
+            <div class="g_map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.219162889747!2d72.8654373148223!3d19.09803898707526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c844f30b3931%3A0x845eb5b7ccda398d!2sBATS!5e0!3m2!1sen!2sin!4v1664811946863!5m2!1sen!2sin" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="contact_content">
+                <p><b>Address : Benguluru,India.</b></p>
+                <p><b>Call/Phone : +91 9236547890</b></p>
+                <p><b>Mail : support@gmail.com</b></p>
+            </div>
+       </div> 
+
+
+ 
+        <div class="feed">
+            <h2>Write a review</h2>
+            <div class="feed_form" method="post">
+                <form name="submit-googlesheet">
+                    <input type="text" name="Name" placeholder="Name"><br>
+                    <input type="email" name="Email" placeholder="Email ID"><br>
+                    <input type="number" name="Number" placeholder="Contact Number"><br>
+                    <textarea rows="5" cols="7" name="Review" placeholder="Write your review"></textarea><br>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+
+        <footer>
+            <div class="footer_logo">
+                <a href="index.html"><img src="Images\logo.png" width="150"></a> 
+            </div><br><br>
+            <div class="pages">
+                <h3>Pages</h3>
+                <a href="About Us.html">About Us</a>|
+                <a href="Services.html">Services</a>|
+                <a href="Blogs.html">Blogs</a>|
+                <a href="Login.html">Login</a>|
+                <a href="Login.html">Sign Up</a>
+            </div>
+            <div class="doc">
+                <h3>Documents</h3>
+                <a href=" ">Privacy Policy</a>|
+                <a href=" ">Terms of Use</a>|
+                <a href=" ">Refund Policy</a>
+            </div>
+            <div class="social">
+                <h3>Follow Us</h3>
+                <a href="https://www.facebook.com/profile.php?id=100063830183617" target="_blank">FACEBOOK</a>|
+                <a href="https://in.linkedin.com/company/1stop-ai" target="_blank">LINKEDIN</a>|
+                <a href="https://www.instagram.com/1stop.ai/?hl=en" target="_blank">INSTAGRAM</a>
+            </div>
+            <div class="contact">
+                <h3>Contact</h3>
+                <a href="https://api.WhatsApp.com/send?/phone=+919876543210" target="_blank">WHATSAPP</a>|
+                <a href="tel: +919876543210 ">PHONE</a>|
+                <a href="mailto: support@1stop.ai">MAIL</a>
+            </div>
+            <hr>
+            <p>Copyright &copy; 2021 1stop. All rights reserved</p>
+        </footer>
+        
+         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" 
+    integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+
+        <!-- Latest compiled and minified JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" 
+    integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+        const scriptURL =
+            'https://script.google.com/macros/s/AKfycbzDOHAdPxgT9kxRyEOXiuULEjFiK13XN0LExeeV0JLhqIeJsMOTJ8XtFwt8FKClgrUJXQ/exec'
+        const form = document.forms['submit-googlesheet']
+     
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, {
+                    method: 'POST',
+                    body: new FormData(form)
+                })
+                .then(response => alert(
+                    "Thanks for you valuable feedback!!!"))
+                .catch(error => console.error('Error!', error.message))
+        })
+     
+     </script>
+     
+     
+
+    </body>
+</html>
